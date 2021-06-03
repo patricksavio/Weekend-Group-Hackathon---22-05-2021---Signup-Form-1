@@ -8,11 +8,10 @@ const App = () => {
   const [gender, setgender] = useState('male');
   const [phone, setphone] = useState('');
   const [password, setpassword] = useState('');
-  const [success, setsuccess] = useState('');
+  const [success, setsuccess] = useState(false);
   const [message, setmessage] = useState('');
   const [error, seterror] = useState('')
   useEffect(() => {
-    setpassword('');
     setemail('');
     setgender('');
     setphone('');
@@ -45,7 +44,7 @@ const App = () => {
         } else {
           setsuccess(true);
           let username = email.split("@");
-          setmessage(username[0]);
+          setmessage(`Hello ${username[0]}`);
         }
       }
     }
