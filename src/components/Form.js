@@ -48,7 +48,7 @@ export default function Form() {
     }
   }
   return (
-    <div className="center_div">
+    // <div className="center_div">
       <form>
       {!success && error}
       {success && message}
@@ -78,6 +78,6 @@ export default function Form() {
         </div>
         <button type="submit" className="btn btn-primary" data-testid = 'submit' onClick={submitForm}>Submit</button>
     </form>
-  </div>
+  // </div>
   )
 }
