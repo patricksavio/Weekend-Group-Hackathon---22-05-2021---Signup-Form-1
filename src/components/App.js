@@ -18,21 +18,6 @@ const App = () => {
     setpassword('');
     setname('');
   }, [success])
-  const setnameHandler = (e) => {
-    setname(e.target.value)
-  }
-  const setemailHandler = (e) => {
-    setemail(e.target.value)
-  }
-  const setpasswordHandler = (e) => {
-    setpassword(e.target.value)
-  }
-  const setphoneHandler = (e) => {
-    setphone(e.target.value)
-  }
-  const setgenderHandler = (e) => {
-    setgender(e.target.value)
-  }
   const submitForm = (e) => {
     e.preventDefault();
     if (name === '' && email === '' && gender === '' && phone === '' && password === '') {
@@ -71,27 +56,27 @@ const App = () => {
       {success && message}
         <div className="mb-3">
         <label htmlFor="name">Name</label>
-          <input type="text" className="form-control" data-testid="name" onChange={setnameHandler}/>
+          <input type="text" className="form-control" data-testid="name" onChange={(e)=>setname(e.target.value)}/>
         </div>
         <div className="mb-3">
           <label htmlFor="email">Email address</label>
-          <input type="email" className="form-control" data-testid="email" onChange={setemailHandler}/>
+          <input type="email" className="form-control" data-testid="email" onChange={(e)=>setemail(e.target.value)}/>
         </div>
         <div className="mb-3">
         <label htmlFor="email">Gender</label>
-          <select className="form-select" data-testid = 'gender' onChange={setgenderHandler}>
-            <option value="male" defaultValue>male</option>
+          <select className="form-select" data-testid = 'gender' onChange={(e)=>setgender(e.target.value)}>
+            <option value="male">male</option>
             <option value="female" >female</option>
             <option value="other">other</option>
          </select>
         </div>
         <div className="mb-3">
           <label htmlFor="phone">Phone Number</label>
-          <input type="number" className="form-control" data-testid = 'phoneNumber' onChange={setphoneHandler}/>
+          <input type="number" className="form-control" data-testid = 'phoneNumber' onChange={(e)=>setphone(e.target.value)}/>
         </div>
         <div className="mb-3">
         <label htmlFor="phone">Password</label>
-          <input type="password" className="form-control" data-testid = 'password' onChange={setpasswordHandler}/>
+          <input type="password" className="form-control" data-testid = 'password' onChange={(e)=>setpassword(e.target.value)}/>
         </div>
         <button type="submit" className="btn btn-primary" data-testid = 'submit' onClick={submitForm}>Submit</button>
     </form>
