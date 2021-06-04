@@ -36,6 +36,9 @@ const App = () => {
         else if (!email.includes('@')) {
           seterror("Email must contain @")
         }
+        else if (gender === "") {
+          seterror("Please identify as male, female or others")
+        }
         else if (isNaN(phone)) {
           seterror("Phone Number must contain only numbers")
         }
