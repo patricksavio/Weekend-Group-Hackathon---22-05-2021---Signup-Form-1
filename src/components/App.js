@@ -16,6 +16,7 @@ const App = () => {
     setphone('');
     setpassword('');
     setname('');
+    seterror('');
   }, [success])
   const submitForm = (e) => {
     e.preventDefault();
