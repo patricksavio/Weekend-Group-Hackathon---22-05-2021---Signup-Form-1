@@ -1,5 +1,4 @@
 import React, { Component, useState,useEffect } from "react";
-import Form from './Form';
 import '../styles/App.css';
 
 const App = () => {
