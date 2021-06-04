@@ -9,14 +9,14 @@ const App = () => {
   const [password, setpassword] = useState('');
   const [success, setsuccess] = useState(false);
   const [message, setmessage] = useState('');
-  const [error, seterror] = useState('')
+  const [error, seterror] = useState(null)
   useEffect(() => {
     setemail('');
     setgender('');
     setphone('');
     setpassword('');
     setname('');
-    seterror('');
+    seterror(null);
   }, [success])
   const submitForm = (e) => {
     e.preventDefault();
