@@ -45,6 +45,7 @@ const App = () => {
           seterror("Password must contain atleast 6 letters")
         } else {
           setsuccess(true);
+          seterror(null);
           let username = email.split("@");
           setmessage(`Hello ${username[0]}`);
         }
